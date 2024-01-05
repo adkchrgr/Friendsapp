@@ -1,0 +1,23 @@
+
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">
+    <%= @friend.first_name %>
+    <%= @friend.last_name %></h1>
+  <p class="lead"> 
+    <%= @friend.email %> |
+    <%= @friend.phone %> |
+    <%= @friend.twitter %></p>
+  <hr class="my-4">
+  </br>
+
+  <div class="input-group">Notes:</span>
+  <textarea class="form-control" aria-label="With textarea"></textarea>
+  </div>
+  </br>
+
+  <a class="btn btn-primary btn-lg" href="#" role="button">Maybe button to Add/edit notes?</a>
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-secondary" %> |
+  <%= link_to "Back to friends", friends_path, class:"btn btn-secondary" %> |
+  <%= button_to "Un-Friend", @friend, method: :delete, class:"btn btn-danger"%>
+</div>
+
